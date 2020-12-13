@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="assembly\Assembly.cs" />
     <Compile Include="components\GraphicsCard.cs" />
     <Compile Include="components\MemoryDisc.cs" />
     <Compile Include="components\Motherboard.cs" />
