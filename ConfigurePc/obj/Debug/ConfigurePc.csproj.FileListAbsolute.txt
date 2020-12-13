@@ -1,0 +1,13 @@
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\bin\Debug\ConfigurePc.exe.config
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\bin\Debug\ConfigurePc.exe
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\bin\Debug\ConfigurePc.pdb
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.csprojAssemblyReference.cache
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.Form1.resources
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.PersonalUse.resources
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.Properties.Resources.resources
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.csproj.GenerateResource.cache
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.csproj.CoreCompileInputs.cache
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.exe
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.pdb
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.LastQestion.resources
+C:\Users\Takoage\source\repos\ConfigurePc\ConfigurePc\obj\Debug\ConfigurePc.MadeForm.resources
