@@ -10,23 +10,30 @@ using System.Windows.Forms;
 using ConfigurePc.storage;
 
 namespace ConfigurePc
-{
+{   /// <summary>
+    /// 
+    /// </summary>
+   
+
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class MadeForm : Form
     {
         private string state = null;
         private string sourse = "sphere";
 
-        private string[] normalP = new string[] 
+        private string[] normalP = new string[]
         {
-        "Visual Studio 2019",
+        "Anaconda",
         "Photoshop",
-        "Sony vegas pro",
-        "Notepad++"
+        "DaVinci",
+        "MS Office"
         };
 
         private string[] normal = new string[] 
         {
-            "для рядового пользователя",
+            "рядовой пользователь",
             "видеоредакор",
             "программист",
             "датасайнтист",
@@ -38,8 +45,11 @@ namespace ConfigurePc
         "Red Dead Redemption 2"
         };
 
+
+
         public MadeForm(string state)
         {
+
             InitializeComponent();
             this.state = state;
             this.setListbox(state);
@@ -90,10 +100,14 @@ namespace ConfigurePc
 
         private void MakeButton_Click(object sender, EventArgs e)
         {
-            //for( int i = 0; i < listBox1.SelectedIndices.Count; i++)
-            //{
-            //    this.textBox1.Text += listBox1.SelectedItems[i].ToString() + "\r\n";
-            //};
+            Assembly ass = new Assembly();
+            ass.makeAssembly(listBox1.SelectedItems[0].ToString());
+            string[] fin = new string[] { ass.poleProc.ToString(), ass.poleMoth.ToString(), ass.poleRAM.ToString(), ass.poleGCard.ToString(), ass.poleMem.ToString(), ass.polePower.ToString(), ass.price.ToString()};
+            for(int i = 0; i< fin.Length; i++)
+            {
+                this.textBox1.Text += fin[i] + "\r\n";
+            }
+            //this.textBox1.Text += listBox1.SelectedItems[i].ToString() + "\r\n";
         }
 
         private void label3_Click(object sender, EventArgs e)

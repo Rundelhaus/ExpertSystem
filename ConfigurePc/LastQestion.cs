@@ -38,11 +38,6 @@ namespace ConfigurePc
             }
         }
 
-        private void ConfigureButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MadeButton_Click(object sender, EventArgs e)
         {
             this.Hide();

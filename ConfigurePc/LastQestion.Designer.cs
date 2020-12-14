@@ -30,39 +30,28 @@ namespace ConfigurePc
         private void InitializeComponent()
         {
             this.MadeButton = new System.Windows.Forms.Button();
-            this.ConfigureButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.backLQButton = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MadeButton
             // 
-            this.MadeButton.Location = new System.Drawing.Point(40, 141);
+            this.MadeButton.Location = new System.Drawing.Point(131, 124);
             this.MadeButton.Name = "MadeButton";
             this.MadeButton.Size = new System.Drawing.Size(75, 23);
             this.MadeButton.TabIndex = 1;
-            this.MadeButton.Text = "Made";
+            this.MadeButton.Text = "Да";
             this.MadeButton.UseVisualStyleBackColor = true;
             this.MadeButton.Click += new System.EventHandler(this.MadeButton_Click);
-            // 
-            // ConfigureButton
-            // 
-            this.ConfigureButton.Location = new System.Drawing.Point(211, 141);
-            this.ConfigureButton.Name = "ConfigureButton";
-            this.ConfigureButton.Size = new System.Drawing.Size(75, 23);
-            this.ConfigureButton.TabIndex = 2;
-            this.ConfigureButton.Text = "Configure";
-            this.ConfigureButton.UseVisualStyleBackColor = true;
-            this.ConfigureButton.Click += new System.EventHandler(this.ConfigureButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 65);
+            this.label1.Location = new System.Drawing.Point(50, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 26);
+            this.label1.Size = new System.Drawing.Size(247, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Вас интересует готовый компьютер, \r\nили желаете подобрать конфигурацию?";
+            this.label1.Text = "Желаете приступить к подбору конфигурации?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // backLQButton
@@ -70,7 +59,7 @@ namespace ConfigurePc
             this.backLQButton.AutoSize = true;
             this.backLQButton.BackColor = System.Drawing.SystemColors.Control;
             this.backLQButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.backLQButton.Location = new System.Drawing.Point(12, 189);
+            this.backLQButton.Location = new System.Drawing.Point(12, 187);
             this.backLQButton.Name = "backLQButton";
             this.backLQButton.Size = new System.Drawing.Size(41, 15);
             this.backLQButton.TabIndex = 4;
@@ -84,7 +73,6 @@ namespace ConfigurePc
             this.ClientSize = new System.Drawing.Size(334, 211);
             this.Controls.Add(this.backLQButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ConfigureButton);
             this.Controls.Add(this.MadeButton);
             this.Name = "LastQestion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -97,7 +85,6 @@ namespace ConfigurePc
 
         #endregion
         private System.Windows.Forms.Button MadeButton;
-        private System.Windows.Forms.Button ConfigureButton;
         private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.Label backLQButton;

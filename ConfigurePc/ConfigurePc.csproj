@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="assembly\Assembly.cs" />
+    <Compile Include="Assembly.cs" />
     <Compile Include="components\GraphicsCard.cs" />
     <Compile Include="components\MemoryDisc.cs" />
     <Compile Include="components\Motherboard.cs" />
@@ -79,7 +79,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="storage\ComputerCaseStorage.cs" />
     <Compile Include="storage\Storage.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -115,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assembly\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
