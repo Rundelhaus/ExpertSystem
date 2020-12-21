@@ -45,6 +45,7 @@ namespace ConfigurePc
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(185, 20);
             this.priceTextBox.TabIndex = 0;
+            this.priceTextBox.Text = "20500";
             // 
             // textBox1
             // 

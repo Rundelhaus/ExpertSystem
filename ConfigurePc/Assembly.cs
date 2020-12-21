@@ -258,7 +258,7 @@ class Assembly
             if (( GCard.volume >= theorGCard.volume))
             {
                 poleGCard = GCard;
-                break;  
+                break; 
             }
         } 
     }

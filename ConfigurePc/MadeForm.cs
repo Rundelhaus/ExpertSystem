@@ -71,6 +71,16 @@ namespace ConfigurePc
 
         private void setListbox(string state)
         {
+            
+        }
+
+        private void MadeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MadeForm_Load(object sender, EventArgs e)
+        {
             if (state == "normal" || state == "office")
             {
                 if (this.sourse == "sphere")
@@ -88,22 +98,13 @@ namespace ConfigurePc
             }
         }
 
-        private void MadeForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void MaekButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void MadeForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MakeButton_Click(object sender, EventArgs e)
-        {
+            //int money = this.priceTextBox.Text();
             Assembly ass = new Assembly();
             ass.makeAssembly(listBox1.SelectedItems[0].ToString());
-            string[] fin = new string[] { ass.poleProc.ToString(), ass.poleMoth.ToString(), ass.poleRAM.ToString(), ass.poleGCard.ToString(), ass.poleMem.ToString(), ass.polePower.ToString(), ass.price.ToString()};
-            for(int i = 0; i< fin.Length; i++)
+            string[] fin = new string[] { ass.poleProc.ToString(), ass.poleMoth.ToString(), ass.poleRAM.ToString(), ass.poleGCard.ToString(), ass.poleMem.ToString(), ass.polePower.ToString(), ass.price.ToString() };
+            for (int i = 0; i < fin.Length; i++)
             {
                 this.textBox1.Text += fin[i] + "\r\n";
             }
@@ -131,6 +132,37 @@ namespace ConfigurePc
                 this.setListbox(this.state);
             }
         }
+
+        private void MakeButton_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                int price = 0;
+                this.textBox1.Text += "Сборка "+ (i+1) + " :\r\n \r\n";
+                int value = rnd.Next(0, 6);
+                this.textBox1.Text += "Видеокарта: " + Storage.graphicsCards[value].getStats() + "\r\n";
+                price += Storage.graphicsCards[value].price;
+                int value1 = rnd.Next(0, 6);
+                this.textBox1.Text += "Материнская плата: " + Storage.motherboards[value1].getStats() + "\r\n";
+                price += Storage.graphicsCards[value1].price;
+                int value2 = rnd.Next(0, 6);
+                this.textBox1.Text += "Жесткий диск: " + Storage.memoryDiscs[value2].getStats() + "\r\n";
+                price += Storage.graphicsCards[value2].price;
+                int value3 = rnd.Next(0, 6);
+                this.textBox1.Text += "Процессор: " + Storage.processors[value3].getStats() + "\r\n";
+                price += Storage.graphicsCards[value3].price;
+                int value4 = rnd.Next(0, 6);
+                this.textBox1.Text += "Оперативная память: " + Storage.randomAccessMemories[value4].getStats() + "\r\n";
+                price += Storage.graphicsCards[value4].price;
+                int value5 = rnd.Next(0, 6);
+                this.textBox1.Text += "Блок питания: " + Storage.powerSupplies[value5].getStats() + "\r\n \r\n";
+                price += Storage.graphicsCards[value5].price;
+                this.textBox1.Text += "Цена: " + price + "\r\n \r\n \r\n";
+                
+            }
+        }
     }
 }
+
 
