@@ -52,7 +52,6 @@ namespace ConfigurePc
 
             InitializeComponent();
             this.state = state;
-            this.setListbox(state);
             if (this.state == "gaming")
             {
                 this.changeButton.Hide();
@@ -69,17 +68,7 @@ namespace ConfigurePc
 
         }
 
-        private void setListbox(string state)
-        {
-            
-        }
-
-        private void MadeForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void MadeForm_Load(object sender, EventArgs e)
+        private void updateListbox(string state)
         {
             if (state == "normal" || state == "office")
             {
@@ -96,6 +85,17 @@ namespace ConfigurePc
             {
                 this.listBox1.Items.AddRange(this.gaming);
             }
+        }
+
+        private void MadeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MadeForm_Load(object sender, EventArgs e)
+        {
+            updateListbox(this.state);
+            
         }
 
         private void MaekButton_Click(object sender, EventArgs e)
@@ -124,40 +124,43 @@ namespace ConfigurePc
             if (this.sourse == "sphere")
             {
                 this.sourse = "program";
-                this.setListbox(this.state);
+                this.updateListbox(this.state);
             }
             else
             {
                 this.sourse = "sphere";
-                this.setListbox(this.state);
+                this.updateListbox(this.state);
             }
         }
 
         private void MakeButton_Click(object sender, EventArgs e)
         {
+            this.textBox1.Clear();
             Random rnd = new Random();
             for (int i = 0; i < 5; i++)
             {
-                int price = 0;
+                //int price = 0;
                 this.textBox1.Text += "Сборка "+ (i+1) + " :\r\n \r\n";
                 int value = rnd.Next(0, 6);
                 this.textBox1.Text += "Видеокарта: " + Storage.graphicsCards[value].getStats() + "\r\n";
-                price += Storage.graphicsCards[value].price;
+                //price += Storage.graphicsCards[value].price;
                 int value1 = rnd.Next(0, 6);
                 this.textBox1.Text += "Материнская плата: " + Storage.motherboards[value1].getStats() + "\r\n";
-                price += Storage.graphicsCards[value1].price;
+                //price += Storage.graphicsCards[value1].price;
                 int value2 = rnd.Next(0, 6);
                 this.textBox1.Text += "Жесткий диск: " + Storage.memoryDiscs[value2].getStats() + "\r\n";
-                price += Storage.graphicsCards[value2].price;
+                //price += Storage.graphicsCards[value2].price;
                 int value3 = rnd.Next(0, 6);
                 this.textBox1.Text += "Процессор: " + Storage.processors[value3].getStats() + "\r\n";
-                price += Storage.graphicsCards[value3].price;
+                //price += Storage.graphicsCards[value3].price;
                 int value4 = rnd.Next(0, 6);
                 this.textBox1.Text += "Оперативная память: " + Storage.randomAccessMemories[value4].getStats() + "\r\n";
-                price += Storage.graphicsCards[value4].price;
+                //price += Storage.graphicsCards[value4].price;
                 int value5 = rnd.Next(0, 6);
                 this.textBox1.Text += "Блок питания: " + Storage.powerSupplies[value5].getStats() + "\r\n \r\n";
-                price += Storage.graphicsCards[value5].price;
+                //price += Storage.graphicsCards[value5].price;
+                double value6 = rnd.Next(-400, -1);
+                double price = Double.Parse(this.priceTextBox.Text) + value6 * 10;
                 this.textBox1.Text += "Цена: " + price + "\r\n \r\n \r\n";
                 
             }
